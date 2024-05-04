@@ -1,0 +1,23 @@
+Solo project proposal, custom wireframe made in Balsamiq, and I based my wireframe from the iSport module.
+
+Description:
+My idea was similar to iSport in that my project would be more focused for car enthusiasts adding locations for backroad/hill runs and where my wireframe is referred to.  
+
+Stack Focus: 
+JavaScript/Mern
+
+GitHub:
+<link here>
+
+CRUD Functionality:
+User can create own profile
+User will be able to view all the locations that others have posted for recommendations
+User can select locations link to view more details
+User can create own recommendations
+User will be able to edit/update and delete own posts
+
+Validations:
+When user creates own account, uploads, and edits own upload
+There will be requirements for inputs and errors for the appropriate inputs
+
+
