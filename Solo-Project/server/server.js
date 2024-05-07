@@ -3,11 +3,12 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import dbConnect from './config/mongoose.config.js'
 import router from './routes/temp.routes.js'
+import cookieParser from 'cookie-parser'
 
 dbConnect();
 
 const app = express();
-app.use(express.json(), cors());
+app.use(express.json(), cors({credentials:true, origin:'http://localhost:5173'}));
 
 dotenv.config();
 app.use('/api', router)
