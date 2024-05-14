@@ -12,6 +12,8 @@ const CreatePost = () => {
         location: '',
         description: ''
     })
+    const [errors, setErrors] = useState({})
+
     const changeHandler = (e) => {
         setRun({ ...run, [e.target.name]: e.target.value })
     }
@@ -23,8 +25,12 @@ const CreatePost = () => {
             .then((res) => {
                 navigate('/home')
             })
-            .catch((err) => {
-                console.log(err)
+            .catch((error) => {
+                console.log('LINE 29: CreatePost.jsx ', error.response.data.errors)
+                setErrors(error.response.data.errors)
+                alert('Unauthorized 401')
+                navigate('/')
+
             })
     }
 
@@ -35,16 +41,19 @@ const CreatePost = () => {
                 <div class="form-outline" data-mdb-input-init>
                     <label htmlFor="name" class="form-label">Run Name</label>
                     <input type="text" name="name" value={run.name} onChange={changeHandler} class="form-control" />
+                    {errors.name && <p className="err-Msg">{errors.name.message}</p>}
                 </div>
 
                 <div class="form-outline" data-mdb-input-init>
                     <label class="form-label" htmlFor="location">Location</label>
                     <input type="text" name="location" value={run.location} onChange={changeHandler} class="form-control" />
+                    {errors.location && <p className="err-Msg">{errors.location.message}</p>}
                 </div>
 
                 <div class="form-outline" data-mdb-input-init>
-                    <label class="form-label" for="textAreaExample">Description</label>
+                    <label class="form-label" htmlFor="description">Description</label>
                     <textarea class="form-control" value={run.description} onChange={changeHandler} name="description" rows="4"></textarea>
+                    {errors.description && <p className="err-Msg">{errors.description.message}</p>}
                 </div>
 
                 <div class="d-grid gap-2">

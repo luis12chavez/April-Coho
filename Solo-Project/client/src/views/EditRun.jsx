@@ -68,7 +68,7 @@ const EditRun = () => {
                 </div>
 
                 <div class="form-outline" data-mdb-input-init>
-                    <label class="form-label" for="textAreaExample">Description</label>
+                    <label class="form-label" htmlFor="description">Description</label>
                     <textarea class="form-control" value={editedRun.description} onChange={changeHandler} name="description" rows="4"></textarea>
                     {errors.description && <p className="err-Msg">{errors.description.message}</p>}
                 </div>

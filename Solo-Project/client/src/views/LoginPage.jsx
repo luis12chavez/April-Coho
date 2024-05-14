@@ -39,6 +39,7 @@ const LoginPage = (props) => {
         axios.post('http://localhost:8000/api/users', { fName, lName, email, password, confirmPassword }, { withCredentials: true })
             .then(res => {
                 console.log(res.data)
+                accountUpdater(res.data)
                 navigate('/home')
             })
             .catch(err => {
@@ -77,9 +78,12 @@ const LoginPage = (props) => {
 
 
     return (
-        <>
-            <h1>Coast</h1>
-            <h3>Find your drive</h3>
+        <div className='container'>
+
+            <div class=''>
+                <h1 class='text-center'>Coast</h1>
+                <h3 class='text-center'>Find your drive</h3>
+            </div>
 
             <div className="container">
                 <div class="row mb-4">
@@ -105,7 +109,7 @@ const LoginPage = (props) => {
 
                             <div class="form-outline mb-4">
                                 {/* <label htmlFor="email">Email</label> */}
-                                <input class="form-control" placeholder='First Name' type="email" value={email} onChange={emailHandler} />
+                                <input class="form-control" placeholder='Email' type="email" value={email} onChange={emailHandler} />
                                 {errors.email && <p className="err-Msg">{errors.email.message}</p>}
                             </div>
 
@@ -147,7 +151,7 @@ const LoginPage = (props) => {
                     </div>
                 </div >
             </div>
-        </>
+        </div>
     )
 }
 export default LoginPage

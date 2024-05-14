@@ -19,6 +19,7 @@ const AccountDetail = () => {
             })
             .catch((err) => {
                 console.log(err)
+                navigate('/')
             })
     }, [id])
 
@@ -35,8 +36,8 @@ const AccountDetail = () => {
 
     return (
         <div class="container">
+                <h1 class='text-center'>Uploads</h1>
             <div class="row row-cols-1 row-cols-md-3 g-4">
-
                 {
                     runs.map((run) => (
                         <div key={run._id} class="col">

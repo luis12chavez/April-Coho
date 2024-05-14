@@ -21,6 +21,7 @@ const Dashboard = (props) => {
             })
             .catch((err) => {
                 console.log(err)
+                navigate('/')
             })
     }, [])
 
@@ -43,15 +44,21 @@ const Dashboard = (props) => {
 
     return (
         <>
-            <h1>{currentAccount.fName}</h1>
+            {/* <h1>{currentAccount.fName}</h1> */}
             <div className=" p-2 border-bottom border-top row text-center align-items-center ">
                 <div className="col">
-                    <h1>Dashboard</h1>
+                    <div className="col">
+                        <h1>Dashboard</h1>
+                        <button class='btn btn-primary' onClick={logoutHandler}>Logout</button>
+                    </div>
+                    <form class="d-flex" >
+                        <label htmlFor="searchValue" class="form-label"></label>
+                        <input name="searchValue" type="text" class="form-control me-2" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success">Search</button>
+                    </form>
                 </div>
 
-                <div className="col">
-                    <button onClick={logoutHandler}>Logout</button>
-                </div>
+
             </div>
 
             <table class="table align-middle mb-0 bg-grey">
