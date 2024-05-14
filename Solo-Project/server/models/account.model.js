@@ -3,13 +3,13 @@ import bcrypt from 'bcrypt'
 
 const AccountSchema = new Schema(
     {
-        fname: {
+        fName: {
             type: String,
             required: [true, 'Name is required...'],
             minlength: [3, 'Name must be a minimum of 3 characters'],
             maxlength: [25, 'Name has a maximum limit of 25 characters']
         },
-        lname: {
+        lName: {
             type: String,
             required: [true, 'Last name is required...'],
             minlength: [3, 'Last name must be a minimum of 3 characters'],
@@ -49,9 +49,9 @@ AccountSchema.pre('validate', function (next) {
 });
 
 // near the top is a good place to group our imports
-const bcrypt = require('bcrypt');
-// this should go after 
-UserSchema.pre('save', function (next) {
+// const bcrypt = require('bcrypt');
+// // this should go after 
+AccountSchema.pre('save', function (next) {
     bcrypt.hash(this.password, 10)
         .then(hash => {
             this.password = hash;

@@ -1,11 +1,15 @@
-*
+/* *
 {
     padding: 0;
     margin: 0;
-}
+} */
 .container
 {    
     width: 1700px;
     margin: 0 auto;
-    border: 1px solid limegreen;
+    /* border: 1px solid limegreen; */
+}
+
+.err-Msg {
+    color: red;
 }
