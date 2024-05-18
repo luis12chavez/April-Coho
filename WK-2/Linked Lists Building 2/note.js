@@ -73,9 +73,9 @@ const list = new LinkedList()
 
 list.push(25)
 list.push(54)
-list.push(6)
-list.push(55)
-list.displayLastListData()
-list.addTwoToDataValue()
+// list.push(6)
+// list.push(55)
+// list.displayLastListData()
+// list.addTwoToDataValue()cd 
 console.log(list)
 // console.log(list.findbyValue(56))

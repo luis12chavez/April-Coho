@@ -82,7 +82,7 @@ const LoginPage = (props) => {
 
             <div class=''>
                 <h1 class='text-center'>Coast</h1>
-                <h3 class='text-center'>Find your drive</h3>
+                <h3 class='text-center'>Find Your Drive</h3>
             </div>
 
             <div className="container">

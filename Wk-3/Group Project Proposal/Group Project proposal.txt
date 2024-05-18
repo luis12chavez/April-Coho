@@ -1,0 +1,26 @@
+Group Project proposal
+
+Description:
+This application will be a website for users to view posts about related to video games. Users will be able to view all games that others have published. Posts will be categorized by number of favorites, genre.
+
+GitHub:
+<Link Here>
+
+Stack Focus:
+JavaScript/ERN/MySQL
+
+CRUD Functionality:
+User can create own account
+User will be to view all games uploaded to application
+User can create reviews to a game
+User can create favorite to a game
+User will be able to edit/update and delete review
+User can delete favorite to a game
+User can edit/update rent option
+giovanni15vargas@gmail.com
+
+Validations: 
+When user creates account and review
+Requirements for user inputs and errors for the appropriate inputs 
+
+ 
